@@ -33,12 +33,12 @@ class Magazine
   # end
 
   def article_titles
-    magazine_articles.map { |article| article.title }
+    mag_articles.map { |article| article.title }
   end
 
   def contributing_authors #select all articles that an author has contributed
     freq_authors = []
-    magazine_authors.tally.each { |key, value| value > 2 && (freq_authors << key) }
+    mag_authors.tally.each { |key, value| value > 2 && (freq_authors << key) }
     freq_authors
   end
 end
